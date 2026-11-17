@@ -1,0 +1,202 @@
+/* ========================================
+   App.css — Global layout & styles
+   ======================================== */
+
+/* Reset & Base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #3b82f6;
+  --color-primary-dark: #2563eb;
+  --color-bg: #f1f5f9;
+  --color-surface: #ffffff;
+  --color-text: #1e293b;
+  --color-text-muted: #64748b;
+  --color-border: #e2e8f0;
+  --sidebar-width: 360px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* App Container */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.app__header {
+  background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.app__header-content {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.app__logo {
+  font-size: 1.75rem;
+  line-height: 1;
+}
+
+.app__title {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.app__subtitle {
+  margin: 0;
+  font-size: 0.75rem;
+  opacity: 0.75;
+  font-weight: 400;
+}
+
+.app__flight-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.app__flight-badge {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.app__flight-route {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* Main Layout */
+.app__main {
+  display: flex;
+  flex: 1;
+  gap: 0;
+}
+
+/* Sidebar */
+.app__sidebar {
+  width: var(--sidebar-width);
+  min-width: var(--sidebar-width);
+  background: var(--color-surface);
+  border-right: 1px solid var(--color-border);
+  padding: 1.25rem;
+  overflow-y: auto;
+  max-height: calc(100vh - 56px);
+  position: sticky;
+  top: 56px;
+}
+
+/* Seat Section */
+.app__seat-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.app__seat-instructions {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.25rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-bottom: 0.75rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+.app__seat-instructions strong {
+  color: var(--color-primary);
+}
+
+.app__seat-instructions-icon {
+  font-size: 1rem;
+}
+
+/* Footer */
+.app__footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  border-top: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+
+.app__footer p {
+  margin: 0;
+}
+
+/* ========================================
+   Responsive Design
+   ======================================== */
+
+@media (max-width: 900px) {
+  .app__main {
+    flex-direction: column;
+  }
+
+  .app__sidebar {
+    width: 100%;
+    min-width: 100%;
+    max-height: none;
+    position: static;
+    border-right: none;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .app__seat-section {
+    padding: 1rem 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .app__header {
+    padding: 0.5rem 1rem;
+    flex-direction: column;
+    gap: 0.35rem;
+    text-align: center;
+  }
+
+  .app__title {
+    font-size: 1.1rem;
+  }
+
+  .app__sidebar {
+    padding: 1rem;
+  }
+}

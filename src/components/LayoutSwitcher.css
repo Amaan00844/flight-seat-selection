@@ -1,0 +1,59 @@
+.layout-switcher {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.layout-switcher__label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.layout-switcher__buttons {
+  display: inline-flex;
+  gap: 0.5rem;
+}
+
+.layout-switcher__btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+  padding: 0.5rem 1.25rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-family: inherit;
+}
+
+.layout-switcher__btn:hover {
+  border-color: #93c5fd;
+  background: #f8fafc;
+}
+
+.layout-switcher__btn--active {
+  border-color: #3b82f6;
+  background: #eff6ff;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.layout-switcher__icon {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #1e293b;
+}
+
+.layout-switcher__desc {
+  font-size: 0.7rem;
+  color: #64748b;
+}
+
+.layout-switcher__btn--active .layout-switcher__icon {
+  color: #2563eb;
+}

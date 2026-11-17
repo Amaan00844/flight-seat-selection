@@ -1,0 +1,46 @@
+.seat-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  margin-top: 0.75rem;
+}
+
+.seat-legend__section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.seat-legend__section-title {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.seat-legend__items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.seat-legend__item {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.75rem;
+  color: #475569;
+}
+
+.seat-legend__swatch {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}

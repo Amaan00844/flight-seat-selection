@@ -1,0 +1,136 @@
+.passenger-list {
+  margin-bottom: 1rem;
+}
+
+.passenger-list__title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 0.75rem 0;
+}
+
+.passenger-list__items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.passenger-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.65rem 0.75rem;
+  background: #fff;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  text-align: left;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  position: relative;
+}
+
+.passenger-card:hover {
+  border-color: #93c5fd;
+  background: #f8fafc;
+}
+
+.passenger-card--active {
+  border-color: #3b82f6;
+  background: #eff6ff;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12);
+}
+
+.passenger-card--assigned .passenger-card__avatar {
+  background: #10b981;
+}
+
+.passenger-card__avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #94a3b8;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.passenger-card--active .passenger-card__avatar {
+  background: #3b82f6;
+}
+
+.passenger-card__info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.passenger-card__name {
+  font-weight: 600;
+  color: #1e293b;
+  font-size: 0.9rem;
+}
+
+.passenger-card__seat {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+}
+
+.passenger-card__seat-badge {
+  padding: 0.1rem 0.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  color: #334155;
+  font-size: 0.78rem;
+}
+
+.passenger-card__seat-price {
+  color: #0369a1;
+  font-weight: 600;
+  font-size: 0.78rem;
+}
+
+.passenger-card__seat-free {
+  color: #16a34a;
+  font-weight: 600;
+  font-size: 0.78rem;
+}
+
+.passenger-card__no-seat {
+  color: #94a3b8;
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+.passenger-card__remove {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: none;
+  background: #fee2e2;
+  color: #dc2626;
+  font-size: 0.7rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.15s ease;
+}
+
+.passenger-card__remove:hover {
+  background: #fecaca;
+  transform: scale(1.1);
+}
